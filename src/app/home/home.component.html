@@ -1,1 +1,23 @@
-<h1>Home</h1>
+<div class="contact-card">
+  <div class="contact-photo">
+    <img [src]="contact.photo || './assets/default-photo.jpg'" alt="Contact Photo" />
+  </div>
+  <div class="contact-details">
+    <h2>{{ contact.firstName }} {{ contact.lastName }}</h2>
+    <p><strong>Email:</strong> {{ contact.email }}</p>
+    <p><strong>Phone:</strong> {{ contact.phoneNumber }}</p>
+    <p><strong>Address:</strong> {{ contact.address }}</p>
+    <p><strong>Date of Birth:</strong> {{ contact.dob }}</p>
+  </div>
+</div>
+Update the NewcontactComponent to use the IndividualContactComponent:
+Update your newcontact.component.html file to include the <app-individual-contact> component with the appropriate input:
+html
+Copy code
+<app-individual-contact [contact]="newContact"></app-individual-contact>
+With these changes, you've created a reusable IndividualContactComponent that takes the contact information as input and displays it in a card format. This way, you can easily use this component in other parts of your application if needed. Make sure to adjust the paths and styling according to your project structure and design preferences.
+
+
+
+
+

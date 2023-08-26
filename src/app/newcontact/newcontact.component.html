@@ -1,1 +1,77 @@
-<h1>New Contact</h1>
+<body> 
+ <section> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> <span></span> 
+  
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" class="signin"> 
+
+    <div class="content"> 
+
+     <h2>New Contact</h2> 
+     
+
+     <div class="form"> 
+      
+      <img [src]="url" height="200" width="200"><br>
+            <input type="file" formControlName="photo"(change)="onselectFile($event)">
+
+      <div class="inputBox"> 
+
+        <input matInput formControlName="firstName"> <i>First Name</i>
+
+      </div> 
+
+      <div class="inputBox"> 
+
+        <input matInput formControlName="lastName"> <i>Last Name</i>
+
+      </div> 
+      <div class="inputBox"> 
+
+        
+          <!-- ... other toolbar items ... -->
+        
+          
+            <input matInput formControlName="dob" [matDatepicker]="dobPicker" placeholder="Date of Birth" class="dob" >
+            <mat-datepicker-toggle matSuffix [for]="dobPicker" class="cal" style="color: #29a329; "></mat-datepicker-toggle>
+            <mat-datepicker #dobPicker></mat-datepicker>
+          
+        
+          <!-- ... other toolbar items ... -->
+        
+
+      </div>
+      <div class="inputBox"> 
+
+        <input matInput formControlName="email" > <i>Email id</i>
+
+      </div> 
+      <div class="inputBox"> 
+
+        <input matInput formControlName="phoneNumber" > <i>Phone Number</i>
+
+      </div> 
+      <div class="inputBox"> 
+
+        <input matInput formControlName="address" > <i>Address</i>
+
+      </div> 
+        
+     
+
+      <div> <mat-card-actions align="end">
+        <button class="actionButtons" type="button" (click)="onCancel()" mat-raised-button color="warn">Cancel</button>
+        <button class="actionButtons" type="submit" [disabled]="contactForm.invalid" mat-raised-button color="primary">Create</button>
+      </mat-card-actions>
+      </div> 
+     
+       
+    
+     </div> 
+
+    </div> 
+
+  </form>
+   
+  </section> <!-- partial --> 
+
+</body>
+
