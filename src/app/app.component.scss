@@ -1,6 +1,23 @@
-#menuTitle {
-    font-size: medium;
+.top-icon{
+    color: #1f7a1f;
+}
+#menuTitle{
+    
     margin-right: 20px;
+    font-weight: bolder;
+    color: #29a329;
+    font-size: 28px;
+    // font-family:    "Lucida Console", Courier, monospace;
+}
+
+.body{
+    background: linear-gradient(135);
+}
+
+#menuTitle {
+    font-size: large;
+    margin-right: 80px;
+    font-family: "Lucida Console", Courier, monospace;
 }
 
 .mat-toolbar {
@@ -8,7 +25,7 @@
 }
 
 .mat-sidenav {
-    background-color: #3F51B5;
+    background-color: black;
     width: 160px;
 }
 
